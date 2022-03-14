@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiSendMailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::group(['api' => 'ApiSendMailController'], function() {
+
+	//Method GET Request
+	Route::get('/send/mail/feedback', [ApiSendMailController::class,'send_feedback'])->name('api.send.feedback');
+
+	//Method POST Request
+	Route::post('/send/mail/feedback', [ApiSendMailController::class,'send_feedback'])->name('api.send.feedback');
+
+	//You Can Add more Method Request
+	
 });

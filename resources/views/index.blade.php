@@ -29,6 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="{{url('/')}}/assets/css/style.css" rel="stylesheet">
 
+
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
   * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
@@ -492,7 +493,8 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="form-feedback" role="form" class="php-email-form" enctype="multipart/form-data">
+              @csrf
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -502,17 +504,19 @@
                 </div>
               </div>
               <div class="form-group mt-3">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+              </div>
+              <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" id='message' rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <div class="text-center">
+                <button  id="submit" type="submit">Send Message</button>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              
             </form>
 
           </div>
@@ -557,11 +561,91 @@
   <script src="{{url('/')}}/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="{{url('/')}}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="{{url('/')}}/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="{{url('/')}}/assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="{{url('/')}}/assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+  <!-- Jquery -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+  <!-- Email Submit JS -->
+  <script>
+		//For get event Form Feedback on submit
+		$('#form-feedback').on('submit', function(event){
+			event.preventDefault();
+			var formData = new FormData(this);
+			
+			//Ajax Send Request
+			$.ajax({
+				url: '{{ route("api.send.feedback") }}', //Name Api Route
+				method: 'POST', //Method Request
+				data: formData, 
+				cache:false, 
+				contentType: false, 
+				processData: false, 
+				beforeSend:function() {
+					$('#submit').attr('disabled', 'disabled');
+					$('#submit').html('SENDING...');
+				},
+				success:function(data) {
+					$('#submit').attr('disabled', false);
+					$('#submit').html('SEND MESSAGE');
+					$('#form-feedback')[0].reset();
+					
+					//Json Parse for Response of Request
+					data = JSON.parse(data);
+					
+					//If response message success
+					if (data.message == "success") {
+						
+						//Show Sweet Alert Success
+						Swal.fire({
+						  type: 'success',
+						  title: 'Success!',
+						  text: 'Your FeedBack Has Been Sent!'
+						});
+					
+					//If response message failed
+					} else if (data.message == "failed") {
+					
+						//Show Sweet Alert Error
+						Swal.fire({
+						  type: 'error',
+						  title: 'Opps...!',
+						  text: 'Something Wrong Has Happened!'
+						});
+					} else {
+						
+						//Show Sweet Alert Error
+						Swal.fire({
+						  type: 'error',
+						  title: 'Opps...!',
+						  text: 'Something Wrong Has Happened!',
+						  footer: 'Error: ' + data.message
+						});
+					}
+				},
+				error:function(data, xhr) {
+					$('#submit').attr('disabled', false);
+					$('#submit').html('SEND FEEDBACK');
+					
+					//Show Sweet Alert Error
+					Swal.fire({
+					  type: 'error',
+					  title: 'Opps...!',
+					  text: 'Something Wrong Has Happened!',
+					  footer: 'Error: ' + data
+					});
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
