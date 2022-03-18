@@ -578,13 +578,9 @@
   crossorigin="anonymous"></script>
 
   <!-- Email Submit JS -->
+
   <script>
     function onSubmit(token) {
-        //  alert('Test');
-        document.getElementById("form-feedback").submit();
-    }
-</script>
-  <script>
 		//For get event Form Feedback on submit
 		$('#form-feedback').on('submit', function(event){
 			event.preventDefault();
@@ -654,6 +650,7 @@
 				}
 			});
 		});
+  }
 	</script>
 </body>
 
