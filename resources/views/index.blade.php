@@ -29,6 +29,8 @@
   <!-- Template Main CSS File -->
   <link href="{{url('/')}}/assets/css/style.css" rel="stylesheet">
 
+  <!-- Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -514,7 +516,8 @@
               </div>
 
               <div class="text-center">
-                <button  id="submit" type="submit">Send Message</button>
+                <!-- <button  id="submit" type="submit" >Send Message</button> -->
+                <button  id="submit" type="submit" class="g-recaptcha" data-sitekey="6LcaqeseAAAAAPr6NIaPCSwgKjZjf6C7SwBjezoR" data-callback='onSubmit' data-action='submit'>Send Message</button>
               </div>
               
             </form>
@@ -576,6 +579,12 @@
 
   <!-- Email Submit JS -->
   <script>
+    function onSubmit(token) {
+        //  alert('Test');
+        document.getElementById("form-feedback").submit();
+    }
+</script>
+  <script>
 		//For get event Form Feedback on submit
 		$('#form-feedback').on('submit', function(event){
 			event.preventDefault();
@@ -606,7 +615,7 @@
 						
 						//Show Sweet Alert Success
 						Swal.fire({
-						  type: 'success',
+						  icon: 'success',
 						  title: 'Success!',
 						  text: 'Your FeedBack Has Been Sent!'
 						});
@@ -616,7 +625,7 @@
 					
 						//Show Sweet Alert Error
 						Swal.fire({
-						  type: 'error',
+						  icon: 'error',
 						  title: 'Opps...!',
 						  text: 'Something Wrong Has Happened!'
 						});
@@ -624,7 +633,7 @@
 						
 						//Show Sweet Alert Error
 						Swal.fire({
-						  type: 'error',
+						  icon: 'error',
 						  title: 'Opps...!',
 						  text: 'Something Wrong Has Happened!',
 						  footer: 'Error: ' + data.message
@@ -637,7 +646,7 @@
 					
 					//Show Sweet Alert Error
 					Swal.fire({
-					  type: 'error',
+					  icon: 'error',
 					  title: 'Opps...!',
 					  text: 'Something Wrong Has Happened!',
 					  footer: 'Error: ' + data
