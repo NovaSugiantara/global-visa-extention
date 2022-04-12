@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Global Visa Extention</title>
-  <meta content="Global Visa Extention Most Recommend visa agency in Bali." name="description">
+  <title>Visa Bali Expert</title>
+  <meta content="Visa Bali Expert Most Recommend visa agency in Bali." name="description">
   <meta content="visa" name="keywords">
 
   <!-- Favicons -->
@@ -31,6 +31,7 @@
 
   <!-- Recaptcha -->
   <script src="https://www.google.com/recaptcha/api.js"></script>
+  {!! RecaptchaV3::initJs() !!}
 
   <!-- =======================================================
   * Template Name: Selecao - v4.7.0
@@ -38,6 +39,16 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+    .pricing .features .feature {
+      font-weight: 600; 
+    }
+    .pricing .features h4 {
+      text-align: center;
+      font-size: 16px;
+      padding: 5px; 
+    }
+  </style>
 </head>
 
 <body>
@@ -47,7 +58,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">Visa Logo</a></h1>
+        <h1><a href="index.html">VBE</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -58,7 +69,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#cta">Services</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -74,7 +85,7 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
+          </li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -88,14 +99,14 @@
     <!-- BG VIDEO -->
     <div class="bg-video">
       <img src="assets/img/bg1.jpg" class="image" alt="background">
-    </div> 
+    </div>
     <!-- BG VIDEO -->
     <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Global Visa Bali Extention</span></h2>
-          <p class="animate__animated fanimate__adeInUp">Global Visa Extention Most Recommend visa agency in Bali. It is an absolute leader of Indonesian Visas. We have over [amount] years of experience working with tourists in Bali Since [years]. We have experienced specialists managing the entire application process from start to finish.
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Visa Bali Expert</span></h2>
+          <p class="animate__animated fanimate__adeInUp">{{ $profiles->descriptions }}
           </p>
           <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
@@ -144,8 +155,8 @@
             <h4>
               Welcome to the website of the Indonesian Visa Application Center <br> in Bali.
             </h4>
-            <a href="#" class="btn-learn-more">Apply E-Visa Now</a>
             <a href="#" class="btn-learn-more">Regulation Travelling To Indonesia</a>
+            <a href="#cta" class="btn-learn-more">Learn More</a>
           </div>
           <div class="col-lg-6">
             <p>
@@ -154,8 +165,8 @@
             <ul>
               <li><i class="ri-check-double-line"></i> Our consultants provide all the information that our clients need from start to finish.
               </li>
-              <li><i class="ri-check-double-line"></i> Our company provides a high-quality customised services. 
-                </li>
+              <li><i class="ri-check-double-line"></i> Our company provides a high-quality customised services.
+              </li>
               <li><i class="ri-check-double-line"></i>We cooperate directly with the immigration office. That’s why we always give reasonable prices. Our foreign partners help us to provide an excellent service in various languages.
               </li>
             </ul>
@@ -164,7 +175,7 @@
       </div>
     </section><!-- End About Section -->
 
-   
+
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -185,121 +196,84 @@
       </div>
     </section><!-- End Cta Section -->
 
-     <!-- ======= Features Section ======= -->
-     <section id="features" class="features">
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
       <div class="container">
 
         <ul class="nav nav-tabs row d-flex">
-          <li class="nav-item col-4" data-aos="zoom-in">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-1">
-              <i class="ri-visa-line"></i>
-              <h4 class="d-none d-lg-block">Visa Application Service</h4>
-            </a>
-          </li>
-          <li class="nav-item col-4" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="ri-draft-fill"></i>
-              <h4 class="d-none d-lg-block">Legal Document</h4>
-            </a>
-          </li>
-          <li class="nav-item col-4" data-aos="zoom-in" data-aos-delay="200">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-              <i class="ri-hand-coin-fill"></i>
-              <h4 class="d-none d-lg-block">Bussiness Setup</h4>
-            </a>
-          </li>
+          @foreach ( $services as $service )
+            <li class="nav-item col-4" data-aos="zoom-in">
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $service->id }}">
+                <i class="{{ $service->icon }}"></i>
+                <h4 class="d-none d-lg-block">{{ $service->name }}</h4>
+              </a>
+            </li>
+          @endforeach
         </ul>
       </div>
+      <!-- Modal -->
+      @foreach ( $services as $service )
+        <div class="modal fade-scale" id="exampleModal{{ $service->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="{{ $service->icon }}"></i> - {{ $service->name }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+              {{ $service->detail }}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        @endforeach
+        <!-- /Modal -->
     </section><!-- End Features Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Services</h2>
-          <p>What we do offer</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box" data-aos="zoom-in-left">
-              <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-card-checklist" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-5">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-binoculars" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-5">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
-              <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mt-5">
-            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
-              <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
-          <h2>Pricing</h2>
-          <p  style="color: #fff !important;">Our Competing Prices</p>
+          <h2>Promotions</h2>
+          <p style="color: #fff !important;">Try promo from our offer</p>
         </div>
 
         <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="box" data-aos="zoom-in">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
+        @foreach ( $promos as $promo)
+          <div class="col-lg-4 col-md-4">
+          <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              @if ($promo->extras_id)
+                <span class="advanced">Best Value</span>
+              @endif
+              <h3>{{ $promo->name }}</h3>
+              <h4><sup>{{ $promo->currency }}</sup>{{ $promo->price }}</h4>
+              <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
+              <?php  $featuresArray = preg_split ("/\|\|\|\|/", $promo->feature);?>
+              @foreach ( $featuresArray as $features )
+              <h4>
+                <span class="feature"></span>
+                <span class="value">{{ $features }}</span>
+              </h4>  
+              @endforeach
+              <?php if(empty($promo->descriptions)){ ?>
+                <?php }else{ ?>
+              <hr>
+              <h6 class="text-center text-secondary">Note :</h6>
+              <p class="text-center text-secondary">{{ $promo->descriptions }}</p>
+              <!-- <div class="btn-wrap">
+                <a href="#" class="btn-buy">More</a>
+              </div> -->
+              <?php } ?>
             </div>
           </div>
+        @endforeach
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+          <!-- <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
             <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
               <h3>Business</h3>
               <h4><sup>$</sup>19<span> / month</span></h4>
@@ -316,24 +290,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="box" data-aos="zoom-in" data-aos-delay="300">
               <span class="advanced">Advanced</span>
               <h3>Ultimate</h3>
@@ -349,7 +306,7 @@
                 <a href="#" class="btn-buy">Buy Now</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
@@ -366,97 +323,22 @@
         </div>
 
         <ul class="faq-list">
-
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
-
+          @foreach ( $faqs as $faq )
+            <li>
+              <div data-bs-toggle="collapse" class="collapsed question" href="#faq{{ $faq->id }}"><b>{{ $faq->questions }}</b><i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+              <div id="faq{{ $faq->id }}" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  {{ $faq->answer }}
+                </p>
+              </div>
+            </li>
+            @endforeach
         </ul>
 
       </div>
     </section><!-- End F.A.Q Section -->
-    
-    <hr>
 
-    <section id="other" class="faq">
-      <div class="container">
-
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Other</h2>
-          <p>Other Information</p>
-        </div>
-
-        <ul class="faq-list">
-
-          <li>
-            <div class="collapsed question"><a href="" style="text-decoration: none;color: inherit;">Refund Policy</a><i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          </li>
-
-          <li>
-            <div class="collapsed question"><a href="" style="text-decoration: none;color: inherit;">Appointment</a><i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          </li>
-
-          <li>
-            <div class="collapsed question"><a href="" style="text-decoration: none;color: inherit;">Term And Condition</a><i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          </li>
-
-          <li>
-            <div class="collapsed question"><a href="" style="text-decoration: none;color: inherit;">Privacy Statement</a><i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-          </li>
-        </ul>
-
-      </div>
-    </section><!-- End F.A.Q Section -->
+   
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -474,19 +356,19 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p><a href="" style="text-decoration: none;color: inherit;">Alamat</a></p>
+                <p><a href="https://goo.gl/maps/fT5VvF2o6JaNuzsd8" style="text-decoration: none;color: inherit;">{{ $profiles->alamat }}</a></p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p><a href="mailto:email@example.com" style="text-decoration: none;color: inherit;">info@example.com</a></p>
+                <p><a href="mailto:{{ $profiles->email }}" style="text-decoration: none;color: inherit;">{{ $profiles->email }}</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p><a href="" style="text-decoration: none;color: inherit;">[+62-Phone]</a></p>
+                <p><a href="https://api.whatsapp.com/send?phone={{ $profiles->phone }}" style="text-decoration: none;color: inherit;">{{ $profiles->phone }}</a></p>
               </div>
 
             </div>
@@ -495,31 +377,65 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
 
-            <form id="form-feedback" role="form" class="php-email-form" enctype="multipart/form-data">
-              @csrf
+            <form id="form-feedback" role="form" class="php-email-form">
+            {!! csrf_field() !!}
               <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <div class="col-md-6 form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
+                  @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <div class="col-md-6 form-group{{ $errors->has('email') ? ' has-error' : '' }} mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+                  @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                 </div>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" required>
+              <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }} mt-3">
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+                @if ($errors->has('phone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              <div class="form-group{{ $errors->has('subject') ? ' has-error' : '' }} mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                @if ($errors->has('subject'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('subject') }}</strong>
+                                    </span>
+                                @endif
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" id='message' rows="5" placeholder="Message" required></textarea>
+              <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }} mt-3">
+                <textarea class="form-control" name="message" id='message' rows="5" placeholder="Message"></textarea>
+                @if ($errors->has('message'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('message') }}</strong>
+                                    </span>
+                                @endif
               </div>
+              <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }} mt-3">
+                            <div class="col-md-6">
+                                {!! RecaptchaV3::field('register') !!}
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
               <div class="text-center">
-                <!-- <button  id="submit" type="submit" >Send Message</button> -->
-                <button  id="submit" type="submit" class="g-recaptcha" data-sitekey="6LcaqeseAAAAAPr6NIaPCSwgKjZjf6C7SwBjezoR" data-callback='onSubmit' data-action='submit'>Send Message</button>
+                <button  id="submit" type="submit" >Send Message</button>
               </div>
-              
+
             </form>
 
           </div>
@@ -534,17 +450,17 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Global Visa Extention</h3>
-      <p>Global Visa Extention Most Recommend visa agency in Bali. It is an absolute leader of Indonesian Visas. We have over [amount] years of experience working with tourists in Bali Since [years]. We have experienced specialists managing the entire application process from start to finish.</p>
-      <div class="social-links">
+      <h3>Visa Bali Expert</h3>
+      <p>{{ $profiles->descriptions }}</p>
+      <!-- <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
         <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
+      </div> -->
       <div class="copyright">
-        &copy; Copyright <strong><span>Global Visa Extention</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Visa Bali Expert</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -556,7 +472,13 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://api.whatsapp.com/send?phone={{ $profiles->phone }}" style="margin-bottom: 70px" class="whatsapp d-flex align-items-center justify-content-center" target="_blank">
+<i class="bx bxl-whatsapp"></i>
+</a>
+
+  <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="{{url('/')}}/assets/vendor/aos/aos.js"></script>
@@ -564,94 +486,99 @@
   <script src="{{url('/')}}/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="{{url('/')}}/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="{{url('/')}}/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
   <!-- <script src="{{url('/')}}/assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- <script src="assets/js/script.js"></script> -->
 
   <!-- Sweet Alert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
   <!-- Jquery -->
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
-
-  <!-- Email Submit JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
   <script>
-    function onSubmit(token) {
-		//For get event Form Feedback on submit
-		$('#form-feedback').on('submit', function(event){
-			event.preventDefault();
-			var formData = new FormData(this);
-			
-			//Ajax Send Request
-			$.ajax({
-				url: '{{ route("api.send.feedback") }}', //Name Api Route
-				method: 'POST', //Method Request
-				data: formData, 
-				cache:false, 
-				contentType: false, 
-				processData: false, 
-				beforeSend:function() {
-					$('#submit').attr('disabled', 'disabled');
-					$('#submit').html('SENDING...');
-				},
-				success:function(data) {
-					$('#submit').attr('disabled', false);
-					$('#submit').html('SEND MESSAGE');
-					$('#form-feedback')[0].reset();
-					
-					//Json Parse for Response of Request
-					data = JSON.parse(data);
-					
-					//If response message success
-					if (data.message == "success") {
-						
-						//Show Sweet Alert Success
-						Swal.fire({
-						  icon: 'success',
-						  title: 'Success!',
-						  text: 'Your FeedBack Has Been Sent!'
-						});
-					
-					//If response message failed
-					} else if (data.message == "failed") {
-					
-						//Show Sweet Alert Error
-						Swal.fire({
-						  icon: 'error',
-						  title: 'Opps...!',
-						  text: 'Something Wrong Has Happened!'
-						});
-					} else {
-						
-						//Show Sweet Alert Error
-						Swal.fire({
-						  icon: 'error',
-						  title: 'Opps...!',
-						  text: 'Something Wrong Has Happened!',
-						  footer: 'Error: ' + data.message
-						});
-					}
-				},
-				error:function(data, xhr) {
-					$('#submit').attr('disabled', false);
-					$('#submit').html('SEND FEEDBACK');
-					
-					//Show Sweet Alert Error
-					Swal.fire({
-					  icon: 'error',
-					  title: 'Opps...!',
-					  text: 'Something Wrong Has Happened!',
-					  footer: 'Error: ' + data
-					});
-				}
-			});
-		});
-  }
-	</script>
+    $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+});
+
+// mailer
+ //For get event Form Feedback on submit
+ $('#form-feedback').on('submit', function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+
+    //Ajax Send Request
+    $.ajax({
+      url: '{{ route("api.send.feedback") }}', //Name Api Route
+      method: 'POST', //Method Request
+      data: formData,
+      cache: false,
+      contentType: false,
+      processData: false,
+      beforeSend: function() {
+        $('#submit').attr('disabled', 'disabled');
+        $('#submit').html('SENDING...');
+      },
+      success: function(data) {
+        $('#submit').attr('disabled', false);
+        $('#submit').html('SEND MESSAGE');
+        $('#form-feedback')[0].reset();
+
+        //Json Parse for Response of Request
+        data = JSON.parse(data);
+
+        //If response message success
+        if (data.message == "success") {
+
+          //Show Sweet Alert Success
+          Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: 'Your FeedBack Has Been Sent!'
+          });
+
+          //If response message failed
+        } else if (data.message == "failed") {
+
+          //Show Sweet Alert Error
+          Swal.fire({
+            icon: 'error',
+            title: 'Opps...!',
+            text: 'Something Wrong Has Happened!'
+          });
+        } else {
+
+          //Show Sweet Alert Error
+          Swal.fire({
+            icon: 'error',
+            title: 'Opps...!',
+            text: 'Something Wrong Has Happened!',
+            footer: 'Error: ' + data.message
+          });
+        }
+      },
+      error: function(data, xhr) {
+        $('#submit').attr('disabled', false);
+        $('#submit').html('SEND FEEDBACK');
+
+        //Show Sweet Alert Error
+        Swal.fire({
+          icon: 'error',
+          title: 'Opps...!',
+          text: 'Something Wrong Has Happened!',
+          footer: 'Error: ' + data
+        });
+      }
+    });
+  });
+  </script>
+
 </body>
 
 </html>

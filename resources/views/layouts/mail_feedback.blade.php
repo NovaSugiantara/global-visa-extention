@@ -53,7 +53,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                         <td align="left" valign="top">
                            <div style="height: 39px; line-height: 39px; font-size: 37px;">&nbsp;</div>
                            <a href="#" target="_blank" style="display: block; max-width: 128px;">
-                              <img src="https://11017-1.b.cdn12.com/mail_template/logo.png" alt="img" width="128" border="0" style="display: block; width: 128px;" />
+                              <img src="https://visabaliexpert.com/img/logo.png" alt="img" width="128" border="0" style="display: block; width: 128px;" />
                            </a>
                            <div style="height: 73px; line-height: 73px; font-size: 71px;">&nbsp;</div>
                         </td>
@@ -72,7 +72,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                            </font>
                            <div style="height: 20px; line-height: 20px; font-size: 18px;">&nbsp;</div>
                            <font face="'Source Sans Pro', sans-serif" color="#585858" style="font-size: 24px; line-height: 32px;">
-                              <span style="font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif; color: #585858; font-size: 22px; line-height: 32px;">My Feedback are {{ $data['message'] }}</span>
+                              <span style="font-family: 'Source Sans Pro', Arial, Tahoma, Geneva, sans-serif; color: #585858; font-size: 22px; line-height: 32px;font-weight: bold;"> My Message are : <br/> {{ $data['message'] }}</span>
                            </font>
                            <div style="height: 33px; line-height: 33px; font-size: 31px;">&nbsp;</div>
                            <div style="height: 75px; line-height: 75px; font-size: 73px;">&nbsp;</div>
@@ -100,7 +100,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                                     <td align="center" valign="top">
                                        <div style="height: 13px; line-height: 13px; font-size: 11px;">&nbsp;</div>
                                        <div style="display: block; max-width: 50px;">
-                                          <img src="https://11017-1.b.cdn12.com/mail_template/rad.png" alt="img" width="50" border="0" style="display: block; width: 50px;" />
+                                          <img src="https://visabaliexpert.com/img/rad.png" alt="img" width="50" border="0" style="display: block; width: 50px;" />
                                        </div>
                                     </td>
                                  </tr>
@@ -129,7 +129,7 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                                     <td align="center" valign="top">
                                        <div style="height: 13px; line-height: 13px; font-size: 11px;">&nbsp;</div>
                                        <div style="display: block; max-width: 177px;">
-                                          <img src="https://11017-1.b.cdn12.com/mail_template/txt.png" alt="img" width="177" border="0" style="display: block; width: 177px; max-width: 100%;" />
+                                          <img src="https://visabaliexpert.com/img/txt.png" alt="img" width="177" border="0" style="display: block; width: 177px; max-width: 100%;" />
                                        </div>
                                     </td>
                                  </tr>
@@ -198,25 +198,25 @@ html { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;}
                                        <tr>
                                           <td align="center" valign="top">
                                              <a href="#" target="_blank" style="display: block; max-width: 19px;">
-                                                <img src="https://11017-1.b.cdn12.com/mail_template/soc_1.png" alt="img" width="19" border="0" style="display: block; width: 19px;" />
+                                                <img src="https://visabaliexpert.com/img/soc_1.png" alt="img" width="19" border="0" style="display: block; width: 19px;" />
                                              </a>
                                           </td>
                                           <td width="45" style="width: 45px; max-width: 45px; min-width: 45px;">&nbsp;</td>
                                           <td align="center" valign="top">
                                              <a href="#" target="_blank" style="display: block; max-width: 18px;">
-                                                <img src="https://11017-1.b.cdn12.com/mail_template/soc_2.png" alt="img" width="18" border="0" style="display: block; width: 18px;" />
+                                                <img src="https://visabaliexpert.com/img/soc_2.png" alt="img" width="18" border="0" style="display: block; width: 18px;" />
                                              </a>
                                           </td>
                                           <td width="45" style="width: 45px; max-width: 45px; min-width: 45px;">&nbsp;</td>
                                           <td align="center" valign="top">
                                              <a href="#" target="_blank" style="display: block; max-width: 21px;">
-                                                <img src="https://11017-1.b.cdn12.com/mail_template/soc_3.png" alt="img" width="21" border="0" style="display: block; width: 21px;" />
+                                                <img src="https://visabaliexpert.com/img/soc_3.png" alt="img" width="21" border="0" style="display: block; width: 21px;" />
                                              </a>
                                           </td>
                                           <td width="45" style="width: 45px; max-width: 45px; min-width: 45px;">&nbsp;</td>
                                           <td align="center" valign="top">
                                              <a href="#" target="_blank" style="display: block; max-width: 25px;">
-                                                <img src="https://11017-1.b.cdn12.com/mail_template/soc_4.png" alt="img" width="25" border="0" style="display: block; width: 25px;" />
+                                                <img src="https://visabaliexpert.com/img/soc_4.png" alt="img" width="25" border="0" style="display: block; width: 25px;" />
                                              </a>
                                           </td>
                                        </tr>

@@ -27,9 +27,10 @@ class ApiSendMailController extends Controller
 		$validateData = Validator::make($request->all(), [
 			'name'		=> 'bail|required', 
 			'email'		=> 'bail|required|email', 
-			'phone'	    => 'bail|required',
+			'phone'	    => 'bail|required|numeric',
 			'subject'	=> 'bail|required',
-			'message'	=> 'bail|required'
+			'message'	=> 'bail|required',
+			'g-recaptcha-response' => 'required|recaptchav3:register,0.5'
 		]);
 
 		//Get all error in validate request
@@ -39,15 +40,19 @@ class ApiSendMailController extends Controller
 		if (!(count($errors->all()) > 0 )) {
 
 			//Enter data request to variable array data
+			$gcaptcha = 'g-recaptcha-response';
 			$data = array(
 				'name' 		=> $request->name, 
 				'email'		=> $request->email, 
 				'phone'		=> $request->phone, 
 				'subject'	=> $request->subject, 
 				'message'	=> $request->message,
+				'g-recaptcha-response'=> $request->$gcaptcha,
 				//Send Request is send_feedback
 				'request'	=> 'send_feedback'
 			);
+
+			// dd($data);
 
 			//Try to send Email
 			try {
