@@ -1,5 +1,8 @@
 <?php
 
+use Spatie\Analytics\Period;
+// use Google\Service\Analytics;
+use Spatie\Analytics\AnalyticsFacade as Analytics;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -22,12 +25,12 @@ use App\Http\Controllers\RegulationsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/',[IndexController::class,'index']);
 Route::post('/',[IndexController::class,'store']);
 
 // Admin Page 
 Route::get('/admin', function () {
+    //$analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
     return redirect()->action([AdminController::class, 'index']);
 });
 
