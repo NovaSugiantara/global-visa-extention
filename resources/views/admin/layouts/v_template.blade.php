@@ -37,6 +37,7 @@
 
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-html5-1.6.5/datatables.min.css" />
+    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 
     {{-- csrf token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -291,13 +292,11 @@
         <!-- Option 1: Bootstrap Bundle with Popper -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
     @stack('scripts')
-    
-    @push('scripts')
-    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace('my-editor');
+        <script>
+            CKEDITOR.replace('myeditor');
         </script>
-    @endpush
+    
+    
     <!--end::Page Scripts-->
 </body>
 <!--end::Body-->

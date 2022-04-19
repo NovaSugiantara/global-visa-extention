@@ -11,7 +11,7 @@
                     @include('../../flash_message.flash_message')
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Descriptions</label>
-                        <textarea name="descriptions" class="my-editor form-control" id="my-editor desc" cols="30" rows="10" placeholder="Descriptions">{{ $regulations->descriptions }}</textarea>
+                        <textarea name="descriptions" id="myeditor" class="form-control" id="my-editor desc" cols="30" rows="10" placeholder="Descriptions">{{ $regulations->descriptions }}</textarea>
                     </div>
                     <div class="card-footer text-right">
                            <button class="btn btn-primary" type="submit">Submit</button>

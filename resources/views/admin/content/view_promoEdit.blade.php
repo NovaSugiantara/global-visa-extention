@@ -11,23 +11,23 @@
                     <input type="hidden" name="id" value="{{ $promos->id }}">
                     <div class="form-group">
                         <label for="formGroupExampleInput">Package</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" name="email" placeholder="Package Name" value="{{ $promos->name }}">
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="name" placeholder="Package Name" value="{{ $promos->name }}">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Currency</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" name="alamat" placeholder="Currency" value="{{ $promos->currency }}">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" name="curency" placeholder="Currency" value="{{ $promos->currency }}">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Price</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" name="phone" placeholder="Price" value="{{ $promos->price }}">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" name="price" placeholder="Price" value="{{ $promos->price }}">
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Descriptions</label>
-                        <textarea name="descriptions" id="desc" class="form-control" cols="30" rows="10" placeholder="Descriptions">{{ $promos->descriptions }}</textarea>
+                        <textarea name="descriptions" id="myeditor" class="form-control" cols="30" rows="10" placeholder="Descriptions">{{ $promos->descriptions }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Features</label>
-                        <textarea name="feature" id="desc" class="form-control" cols="30" rows="10" placeholder="Feature">{{ $promos->feature }}</textarea>
+                        <textarea name="feature" id="myeditor2" class="form-control" cols="30" rows="10" placeholder="Feature">{{ $promos->feature }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Extras</label>
@@ -62,3 +62,9 @@
         </div>
     </div>
 </div>
+
+@push('scripts')
+        <script>
+            CKEDITOR.replace('myeditor2');
+        </script>
+    @endpush

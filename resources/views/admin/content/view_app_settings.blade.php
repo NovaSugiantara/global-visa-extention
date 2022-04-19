@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Descriptions</label>
-                        <textarea name="descriptions" id="desc" class="form-control" cols="30" rows="10" placeholder="Descriptions">{{ $profiles->descriptions }}</textarea>
+                        <textarea name="descriptions" id="myeditor"class="form-control" cols="30" rows="10" placeholder="Descriptions">{{ $profiles->descriptions }}</textarea>
                     </div>
                     <div class="card-footer text-right">
                            <button class="btn btn-primary" type="submit">Submit</button>
@@ -34,3 +34,4 @@
         </div>
     </div>
 </div>
+

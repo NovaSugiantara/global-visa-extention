@@ -15,7 +15,7 @@
                     </div>
                     <div class="form-group">
                         <label for="formGroupExampleInput2">Descriptions</label>
-                        <textarea name="description" id="desc" class="form-control" cols="30" rows="10" placeholder="Descriptions">{{ $services->detail }}</textarea>
+                        <textarea name="description" id="myeditor" class="form-control" cols="30" rows="10" placeholder="Descriptions">{{ $services->detail }}</textarea>
                     </div>
                     <div class="card-footer text-right">
                            <button class="btn btn-primary" type="submit">Submit</button>

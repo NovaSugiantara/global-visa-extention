@@ -106,7 +106,7 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Visa Bali Expert</span></h2>
-          <p class="animate__animated fanimate__adeInUp">{{ $profiles->descriptions }}
+          <p class="animate__animated fanimate__adeInUp">{!! $profiles->descriptions !!}
           </p>
           <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
@@ -212,26 +212,8 @@
         </ul>
       </div>
       <!-- Modal -->
-      @foreach ( $services as $service )
-        <div class="modal fade-scale" id="exampleModal{{ $service->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><i class="{{ $service->icon }}"></i> - {{ $service->name }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-              {{ $service->detail }}
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-              </div>
-            </div>
-          </div>
-        </div>
-        @endforeach
-        <!-- /Modal -->
+        @include('modal_service')
+      <!-- /Modal -->
     </section><!-- End Features Section -->
 
     <!-- ======= Pricing Section ======= -->
@@ -257,14 +239,14 @@
               @foreach ( $featuresArray as $features )
               <h4>
                 <span class="feature"></span>
-                <span class="value">{{ $features }}</span>
+                <span class="value">{!! $features !!}</span>
               </h4>  
               @endforeach
               <?php if(empty($promo->descriptions)){ ?>
                 <?php }else{ ?>
               <hr>
               <h6 class="text-center text-secondary">Note :</h6>
-              <p class="text-center text-secondary">{{ $promo->descriptions }}</p>
+              <p class="text-center text-secondary">{!! $promo->descriptions !!}</p>
               <!-- <div class="btn-wrap">
                 <a href="#" class="btn-buy">More</a>
               </div> -->
@@ -451,7 +433,7 @@
   <footer id="footer">
     <div class="container">
       <h3>Visa Bali Expert</h3>
-      <p>{{ $profiles->descriptions }}</p>
+      <p>{!! $profiles->descriptions !!}</p>
       <!-- <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -586,7 +568,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '{{ env(GTAG_ID ) }}');
+  gtag('config', 'G-KPRGV8RB2E');
 </script> -->
 
 </body>
